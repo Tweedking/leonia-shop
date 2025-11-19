@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Academic Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Math', 'Science', 'History', 'Art'],
+      datasets: [{
+        label: 'Scores',
+        data: [85, 90, 78, 88],
+        backgroundColor: ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2']
+      }]
+    },
+    options: {
+      animation: {
+        duration: 2000
+      }
+    }
+  });
+</script>
+
+<a href="https://wa.me/255793085794" class="whatsapp-float" target="_blank">
+  <img src="assets/images/whatsapp-icon.png" alt="Chat on WhatsApp" />
+</a>
+
+<body>
+  <header class="fade-in">
+    <h1>Welcome to My Academic Showcase</h1>
+    <p>Explore topics with interactive animations</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#section1">Topic 1</a></li>
+      <li><a href="#section2">Topic 2</a></li>
+      <li><a href="#section3">Timeline</a></li>
+    </ul>
+  </nav>
+
+  <section id="section1" class="slide-in">
+    <h2>Topic 1: Introduction</h2>
+    <p>This section introduces the core concept with animated effects.</p>
+  </section>
+
+  <section id="section2" class="slide-in">
+    <h2>Topic 2: Deep Dive</h2>
+    <p>Here we explore the topic in more detail with interactive pop-ups.</p>
+    <button onclick="showModal()">Learn More</button>
+  </section>
+
+  <section id="section3" class="fade-in">
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="event">2020 - Concept Origin</div>
+      <div class="event">2022 - Research Expansion</div>
+      <div class="event">2025 - Final Presentation</div>
+    </div>
+  </section>
+
+  <div class="gallery">
+  <a href="assets/images/image1.jpg" target="_blank">
+    <img src="assets/images/A modern academic we.png" alt="Preview 1" />
+  </a>
+  <a href="assets/images/image2.jpg" target="_blank">
+    <img src="assets/images/An academic-themed i.png" alt="Preview 2" />
+  </a>
+  <a href="assets/images/image3.jpg" target="_blank">
+    <img src="assets/images/An animated-style im.png" alt="">
+  </a>
+  <a href="assets/images/image4.jpg" target="_blank">
+    <img src="assets/images/An educational image.png" alt="">
+  </a>
+</div>
+
+
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <section data-aos="fade-up">
+  <h2>Animated on Scroll</h2>
+</section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <p>This is additional academic content in a pop-up modal.</p>
+    </div>
+  </div>
+ 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
